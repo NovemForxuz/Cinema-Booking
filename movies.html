@@ -1,0 +1,330 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SJ Theatres - Movies</title>
+    <link rel="stylesheet" href="stylesheet.css">
+    <link rel="shortcut icon" type="image/jpg" href="./logo.PNG"/>
+</head>
+<body>
+    <div id="wrapper">
+
+        <header>
+            <img id='company_logo' src="headerv2.PNG" alt="Logo" width="300px">
+            <table class="social">
+                <tr>
+                    <td>
+                        <p>Follow us</p>
+                    </td>
+                    <td>
+                        <a href="www.facebook.com"><img class="social" src="facebook-logo.jpg" alt="fb-logo" width="37px"></a>
+                    </td>
+                    <td>
+                        <a href="www.instagram.com"><img class="social" src="instagram-logo.png" alt="ig-logo" width="20px"></a>
+                    </td>
+                </tr>
+            </table>
+        </header>
+
+        <div id="nav">
+            <nav>
+                <ul class="nav">
+                    <li class="nav"><a href="index.html">Home</a></li>
+                    <li class="nav"><a class="active" href="movies.html">Movies</a></li>
+                    <li class="nav"><a href="cinema.html">Cinema</a></li>
+                    <li class="nav"><a href="javascript:openModal()">Check Booking</a></li> <!--trigger js to open modal-->
+                </ul>
+            </nav>
+        </div>
+
+        <!-- The Modal -->
+        <div id="myModal" class="modal">
+
+            <!-- Modal content -->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <span class="close">&times;</span>
+                    <h3>Check Booking</h3>
+                </div>
+                <div class="modal-body">
+                    <br>
+                    <form action="check_booking.php" method="post" style="text-align: center;"> <!--php script to check method, match detail and fetch data from db-->
+                        <label for="check_method">Method:&nbsp;</label>
+                        <select name="check_method" id="check_method">
+                            <option value="email" selected>E-mail</option>
+                            <option value="hp">Phone</option>
+                            <option value="bookid">Ref no.</option>
+                        </select>
+                        <br><br>
+                        <input type="text" name="user_detail" id="user_detail" size="25" required placeholder = "enter details here">
+                        <input type="submit" value="Check" id="user_detail_submit">
+                    </form>
+                </div>
+            </div>
+        </div>
+        <script>
+            // Get the modal
+            var modal = document.getElementById("myModal");
+
+            // Get the button that opens the modal
+            var btn = document.getElementById("myBtn");
+
+            // Get the <span> element that closes the modal
+            var span = document.getElementsByClassName("close")[0];
+
+            // When the user clicks the button, open the modal 
+            function openModal() {
+                modal.style.display = "block";
+            }
+            // When the user clicks on <span> (x), close the modal
+            span.onclick = function() {
+                modal.style.display = "none";
+            }
+            // When the user clicks anywhere outside of the modal, close it
+            window.onclick = function(event) {
+                if (event.target == modal) {
+                    modal.style.display = "none";
+                }
+            }
+        </script>
+
+        <ul class="breadcrumb">
+            <li><a href="index.html">Home</a></li>
+            <li>Movies</li>
+        </ul>
+
+        <div class="content">
+            <div class="tab">
+                <button class="tablinks" onclick="openTab(event, 'Now_Showing')" id="defaultOpen">Now Showing</button>
+                <button class="tablinks" onclick="openTab(event, 'Coming_Soon')">Coming Soon</button>
+            </div>
+              <!-- "Now Shoing" Tab content -->
+              <div id="Now_Showing" class="tabcontent">
+                <br><br><br>
+                <form action="get_movie.php" method="get">
+                    <table class="movie_tabs">
+                        <tr>
+                            <td><img src="./posters_small/007.jpg" alt="movie1"></td>
+                            <td><img src="./posters_small/carnage.webp" alt="movie2"></td>
+                            <td><img src="./posters_small/dune.webp" alt="movie3"></td>
+                            <td><img src="./posters_small/mandalorian.jpg" alt="movie4"></td>
+                            <td><img src="./posters_small/shangchi_small.webp" alt="movie5"></td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p class="movie_title">007 No Time To Die</p>
+                                <small>M16 - some violence</small>
+                                <p>112min</p>
+                                <p>ENG</p>
+                                <button class="book" name="movie" value="1" type="submit">Book / More Info</button>
+                            </td>
+                            <td>
+                                <p class="movie_title">Venom: Let There Be Carnage</p>
+                                <small>M18 - gore and violence</small>
+                                <p>126min</p>
+                                <p>ENG</p>
+                                <button class="book" name="movie" value="2" type="submit">Book / More Info</button>
+                            </td>
+                            <td>
+                                <p class="movie_title">Dune</p>
+                                <small>PG - coarse language</small>
+                                <p>132min</p>
+                                <p>ENG</p>
+                                <button class="book" name="movie" value="3" type="submit">Book / More Info</button>
+                            </td>
+                            <td>
+                                <p class="movie_title">The Mandalorian</p>
+                                <small>G</small>
+                                <p>102min</p>
+                                <p>ENG</p>
+                                <button class="book" name="movie" value="4" type="submit">Book / More Info</button>
+                            </td>
+                            <td>
+                                <p class="movie_title">ShangChi and The Legend of Ten Rings</p>
+                                <small>PG - mild violence</small>
+                                <p>112min</p>
+                                <p>ENG</p>
+                                <button class="book" name="movie" value="5" type="submit">Book / More Info</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><img src="./posters_small/antlers.jpg" alt="movie6"></td>
+                            <td><img src="./posters_small/Late Night Ride.jpg" alt="movie7"></td>
+                            <td><img src="./posters_small/tokyorevengers.webp" alt="movie8"></td>
+                            <td><img src="./posters_small/ron_small.webp" alt="movie9"></td>
+                            <td><img src="./posters_small/cloudyMountain.jpg" alt="movie10"></td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p class="movie_title">Antlers</p>
+                                <small>M16 - blood and gore</small>
+                                <p>112min</p>
+                                <p>ENG</p>
+                                <button class="book" name="movie" value="6" type="submit">Book / More Info</button>
+                            </td>
+                            <td>
+                                <p class="movie_title">Late Night Ride</p>
+                                <small>M18 - violence</small>
+                                <p>126min</p>
+                                <p>CHI</p>
+                                <button class="book" name="movie" value="7" type="submit">Book / More Info</button>
+                            </td>
+                            <td>
+                                <p class="movie_title">Tokyo Revengers</p>
+                                <small>PG - coarse language</small>
+                                <p>121min</p>
+                                <p>JAP</p>
+                                <button class="book" name="movie" value="8" type="submit">Book / More Info</button>
+                            </td>
+                            <td>
+                                <p class="movie_title">Ron's Gone Wrong</p>
+                                <small>G</small>
+                                <p>107min</p>
+                                <p>ENG</p>
+                                <button class="book" name="movie" value="9" type="submit">Book / More Info</button>
+                            </td>
+                            <td>
+                                <p class="movie_title">Cloudy Mountain</p>
+                                <small>PG - mild violence</small>
+                                <p>115min</p>
+                                <p>CHI</p>
+                                <button class="book" name="movie" value="10" type="submit">Book / More Info</button>
+                            </td>
+                        </tr>
+                    </table>
+                </form>
+              </div>
+              
+              <!-- "Coming Soon" Tab content -->
+              <div id="Coming_Soon" class="tabcontent">
+                <br><br><br>
+                <table class="movie_tabs">
+                    <tr>
+                        <td><img src="./posters_small/adams.jpg" alt="movie1"></td>
+                        <td><img src="./posters_small/eternals.jpg" alt="movie2"></td>
+                        <td><img src="./posters_small/lastnight.jpg" alt="movie3"></td>
+                        <td><img src="./posters_small/encanto.jpg" alt="movie4"></td>
+                        <td><img src="./posters_small/belle.jpg" alt="movie5"></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <p class="movie_title">The Adams Family 2</p>
+                            <small>G</small>
+                            <p>109min</p>
+                            <p>ENG</p>
+                        </td>
+                        <td>
+                            <p class="movie_title">Marvel Studios's: The Eternals</p>
+                            <small>(Rating to be advised)</small>
+                            <p>115min</p>
+                            <p>ENG</p>
+                        </td>
+                        <td>
+                            <p class="movie_title">Last Night</p>
+                            <small>(Rating to be advised)</small>
+                            <p>-</p>
+                            <p>ENG</p>
+                        </td>
+                        <td>
+                            <p class="movie_title">Disney Pixar's Encanto</p>
+                            <small>G</small>
+                            <p>102min</p>
+                            <p>ENG</p>
+                        </td>
+                        <td>
+                            <p class="movie_title">Belle</p>
+                            <small>G</small>
+                            <p>122min</p>
+                            <p>ENG</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><img src="./posters_small/freeguy.jpg" alt="movie1"></td>
+                        <td><img src="./posters_small/Dont Breathe 2.jpg" alt="movie2"></td>
+                        <td><img src="./posters_small/pils.webp" alt="movie3"></td>
+                        <td><img src="./posters_small/ghostbusters.webp" alt="movie4"></td>
+                        <td><img src="./posters_small/sooryavanshi.webp" alt="movie5"></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <p class="movie_title">Free Guy</p>
+                            <small>G</small>
+                            <p>112min</p>
+                            <p>ENG</p>
+                        </td>
+                        <td>
+                            <p class="movie_title">Don't Breathe 2</p>
+                            <small>(Rating to be advised)</small>
+                            <p>-</p>
+                            <p>ENG</p>
+                        </td>
+                        <td>
+                            <p class="movie_title">Pil's Adventure</p>
+                            <small>G</small>
+                            <p>121min</p>
+                            <p>ENG</p>
+                        </td>
+                        <td>
+                            <p class="movie_title">Ghostbusters: Afterlife</p>
+                            <small>(Rating to be advised)</small>
+                            <p>107min</p>
+                            <p>ENG</p>
+                        </td>
+                        <td>
+                            <p class="movie_title">Sooryavanshi</p>
+                            <small>PG - mild violence</small>
+                            <p>115min</p>
+                            <p>HIN</p>
+                        </td>
+                    </tr>
+                </table>
+              </div>
+              <script>
+                  function openTab(evt, tabName) {
+                    // Declare all variables
+                    var i, tabcontent, tablinks;
+
+                    // Get all elements with class="tabcontent" and hide them
+                    tabcontent = document.getElementsByClassName("tabcontent");
+                    for (i = 0; i < tabcontent.length; i++) {
+                        tabcontent[i].style.display = "none";
+                    }
+
+                    // Get all elements with class="tablinks" and remove the class "active"
+                    tablinks = document.getElementsByClassName("tablinks");
+                    for (i = 0; i < tablinks.length; i++) {
+                        tablinks[i].className = tablinks[i].className.replace(" active", "");
+                    }
+
+                    // Show the current tab, and add an "active" class to the button that opened the tab
+                    document.getElementById(tabName).style.display = "block";
+                    evt.currentTarget.className += " active";
+                }
+              </script>
+              <script>
+                // Get the element with id="defaultOpen" and click on it
+                document.getElementById("defaultOpen").click();
+              </script>
+        </div>
+        <div class="push"></div>
+        <footer class="footer">
+           <table>
+               <tr>
+                   <td><a href="tnc.html"><small><b>Terms and Conditions</b></small></a></td>
+               </tr>
+               <tr>
+                   <td><small><i>By using our servicces, you hereby agree to these terms. When you 
+                       access this website, you acknowledge that you <br>have read and agree to abide by 
+                       the terms described. If you do not agree to the terms, 
+                       you should exit this site. <br>&copy; SJ Groups Company</i></small>
+                       
+                    </td>
+               </tr>
+           </table>
+        </footer>
+    </div>
+
+
+</body>
+</html>

@@ -1,0 +1,1 @@
+insert all movie posters here for home page, movie page and individual movie detail page

@@ -1,0 +1,76 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SJ Theatres - Home</title>
+    <link rel="stylesheet" href="stylesheet.css">
+</head>
+<body>
+    <div id="wrapper">
+        <header>
+            <img id='company_logo' src="headerv2.PNG" alt="Logo" width="300px">
+            <table class="social">
+                <tr>
+                    <td>
+                        <p>Follow us</p>
+                    </td>
+                    <td>
+                        <a href="www.facebook.com"><img class="social" src="facebook-logo.jpg" alt="fb-logo" width="37px"></a>
+                    </td>
+                    <td>
+                        <a href="www.instagram.com"><img class="social" src="instagram-logo.png" alt="ig-logo" width="20px"></a>
+                    </td>
+                </tr>
+            </table>
+        </header>
+
+        <ul class="progressBar">
+            <li><a href="seat_selection.html">Seat & Tickets</a></li>
+            <li><a href="personal_detail.html">Personal Details</a></li>
+            <li class="active">Confirm & Pay</li>
+            <li>Booking Successful</li>
+        </ul>
+        <div class="confirmation">
+            <h2>Summary</h2>
+            <hr width="600px" align="left">
+            <h3>Booking Selections</h3>
+            <p>Movie: </p>
+            <p>Showing at: cinmea x, hall x, time, date</p>
+            <p>Seat(s): </p>
+            <p>Ticket Type: </p><br>
+            <h3>Customer Details</h3>
+            <p>Name: </p>
+            <p>Email: </p>
+            <p>Phone: </p><br>
+            <h3>Payment</h3>
+            <p style="margin: 0; display: inline;">Ticket Price: </p> <p style="margin: 0; display: inline;">&times;</p> <p style="margin: 0; display: inline;">Quantity: </p><p>Subtotal: </p>
+            <p>Booking Fees: S$1.50</p>
+            <hr width="600px" align="left">
+            <p>Total: </p>
+            <hr width="600px" align="left">
+            <br>
+
+            <!--process_booking.php file to be constructed-->
+            <table class="payment">
+                <tr>
+                    <td>
+                        <form action="show_post.php" id="paymentForm" method="POST">
+                            <select name="paymentMethod" id="paymentMethod" >
+                                <option disabled selected>- - Payment Method - -</option>
+                                <option value="master">Master</option>
+                                <option value="visa">Visa</option>
+                                <option value="dbs">DBS/POSB - PayLah</option>
+                                <option value="grab">Grab Pay</option>
+                            </select>
+                        </form>
+                    </td>
+                    <td><button id= "pay" type="submit" form="paymentForm">Pay</button></td>
+                </tr>
+            </table>
+        </div>
+
+    </div>
+
+</body>
+</html>

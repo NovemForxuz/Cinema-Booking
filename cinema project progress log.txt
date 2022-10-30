@@ -1,0 +1,28 @@
+x home page visuals
+- link indiviual movies to their individual movie page for booking etc
+- implement php for check booking
+- implement js form checker (KIV)
+- content of footer? 
+x movies first page
+- link "book" button to php generated webpage for timeing selection, additional movie info etc
+- create seat "selection" page
+- create ... tbc
+
+- cinema page (KIV)
+- single page with ~ 2 cinema write up, size , no. halls etc. with picture for each cinema, address
+
+
+
+
+for report------------------------------------------
+some methods used:
+
+model (pop up check booking form)
+tabs (now showing/coming soon)
+slider (movie poster banner large slider)
+bread crumb (back tracking navigation)
+"sticky footer" (foot that stays at end of page.. cant make it at end of windows if content smaller than windows)
+table (for organising small posters and their details)
+favicon added
+
+

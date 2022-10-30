@@ -1,0 +1,65 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SJ Theatres - Home</title>
+    <link rel="stylesheet" href="stylesheet.css">
+</head>
+<body>
+    <div id="wrapper">
+        <header>
+            <img id='company_logo' src="headerv2.PNG" alt="Logo" width="300px">
+            <table class="social">
+                <tr>
+                    <td>
+                        <p>Follow us</p>
+                    </td>
+                    <td>
+                        <a href="www.facebook.com"><img class="social" src="facebook-logo.jpg" alt="fb-logo" width="37px"></a>
+                    </td>
+                    <td>
+                        <a href="www.instagram.com"><img class="social" src="instagram-logo.png" alt="ig-logo" width="20px"></a>
+                    </td>
+                </tr>
+            </table>
+        </header>
+
+        <ul class="progressBar">
+            <li><a href="seat_selection.html">Seat & Tickets</a></li>
+            <li class="active">Personal Details</a></li>
+            <li >Confirm & Pay</li>
+            <li>Booking Successful</li>
+        </ul>
+
+        <div class="confirmation">
+            <h2>Personal Details</h2>
+            <!-- php file to capture user detail to be made later-->
+            <form action="get_cust_details.php" method="post">
+                <table class="personalDetailForm">
+                    <tr>
+                        <td class="col1"><label for="cust_name">Name: </label></td>
+                        <td class="col2"><input type="text" name="cust_name" id="cust_name"></td>
+                    </tr>
+                    <tr>
+                        <td class="col1"><label for="cust_phone">Contact number: </label></td>
+                        <td class="col2"><input type="text" name="cust_phone" id="cust_phone"></td>
+                    </tr>
+                    <tr>
+                        <td class="col1"><label for="cust_email">E-mail address: </label></td>
+                        <td class="col2"><input type="text" name="cust_email" id="cust_email"></td>
+                    </tr>
+                    <tr>
+                        <td class="col1"><input type="checkbox" id="tnc" name="tnc" value="True" required></td>
+                        <td class="col2"><label for="tnc">I have read and understood the <a href="tnc.html" style="color: #e7a412;">terms & conditions</a></label></td>
+                    </tr>
+                </table>
+                <input type="submit" value="Next">
+            </form>
+            
+        </div>
+
+    </div>
+
+</body>
+</html>

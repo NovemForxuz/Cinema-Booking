@@ -1,0 +1,227 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SJ Theatres - Home</title>
+    <link rel="stylesheet" href="stylesheet.css">
+    <link rel="shortcut icon" type="image/jpg" href="./logo.PNG"/>
+</head>
+<body>
+    <div id="wrapper">
+        <header>
+            <img id='company_logo' src="headerv2.PNG" alt="Logo" width="300px">
+            <table class="social">
+                <tr>
+                    <td>
+                        <p>Follow us</p>
+                    </td>
+                    <td>
+                        <a href="www.facebook.com"><img class="social" src="facebook-logo.jpg" alt="fb-logo" width="37px"></a>
+                    </td>
+                    <td>
+                        <a href="www.instagram.com"><img class="social" src="instagram-logo.png" alt="ig-logo" width="20px"></a>
+                    </td>
+                </tr>
+            </table>
+        </header>
+        <div id="nav">
+            <nav>
+                <ul class="nav">
+                    <li class="nav"><a class="active" href="index.html">Home</a></li>
+                    <li class="nav"><a href="movies.html">Movies</a></li>
+                    <li class="nav"><a href="cinema.html">Cinema</a></li>
+                    <li class="nav"><a href="javascript:openModal()">Check Booking</a></li> <!--trigger js to open modal-->
+                </ul>
+            </nav>
+        </div>
+        <!-- The Modal -->
+        <div id="myModal" class="modal">
+
+            <!-- Modal content -->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <span class="close">&times;</span>
+                    <h3>Check Booking</h3>
+                </div>
+                <div class="modal-body">
+                    <br>
+                    <form action="check_booking.php" method="post" style="text-align: center;"> <!--php script to check method, match detail and fetch data from db-->
+                        <label for="check_method">Method:&nbsp;</label>
+                        <select name="check_method" id="check_method">
+                            <option value="email" selected>E-mail</option>
+                            <option value="hp">Phone</option>
+                            <option value="bookid">Ref no.</option>
+                        </select>
+                        <br><br>
+                        <input type="text" name="user_detail" id="user_detail" size="25" required placeholder = "enter details here">
+                        <input type="submit" value="Check" id="user_detail_submit">
+                    </form>
+                </div>
+            </div>
+        </div>
+        <script>
+            // Get the modal
+            var modal = document.getElementById("myModal");
+
+            // Get the button that opens the modal
+            var btn = document.getElementById("myBtn");
+
+            // Get the <span> element that closes the modal
+            var span = document.getElementsByClassName("close")[0];
+
+            // When the user clicks the button, open the modal 
+            function openModal() {
+                modal.style.display = "block";
+            }
+            // When the user clicks on <span> (x), close the modal
+            span.onclick = function() {
+                modal.style.display = "none";
+            }
+            // When the user clicks anywhere outside of the modal, close it
+            window.onclick = function(event) {
+                if (event.target == modal) {
+                    modal.style.display = "none";
+                }
+            }
+        </script>
+
+        <div class="slideshow-container">
+            <div class="mySlides fade">
+                <div class="numbertext">1 / 3</div>
+                <img src="slider_img/rons.webp" style="width:100%">
+            </div>
+            
+            <div class="mySlides fade">
+                <div class="numbertext">2 / 3</div>
+                <img src="slider_img/cloudymountain.jpg" style="width:100%">
+            </div>
+            
+            <div class="mySlides fade">
+                <div class="numbertext">3 / 3</div>
+                <img src="slider_img/venom2.webp" style="width:100%">
+            </div>
+            
+            <div style="text-align:center">
+            <span class="dot"></span> 
+            <span class="dot"></span> 
+            <span class="dot"></span> 
+            </div>
+        </div>
+          
+        <script>
+        var slideIndex = 0;
+        showSlides();
+        
+        function showSlides() {
+        var i;
+        var slides = document.getElementsByClassName("mySlides");
+        var dots = document.getElementsByClassName("dot");
+        for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";  
+        }
+        slideIndex++;
+        if (slideIndex > slides.length) {slideIndex = 1}    
+        for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" active", "");
+        }
+        slides[slideIndex-1].style.display = "block";  
+        dots[slideIndex-1].className += " active";
+        setTimeout(showSlides, 5000); // Change image every 2 seconds
+        }
+        </script>
+        <div class="content">
+            <div class="tab">
+                <button class="tablinks" onclick="openTab(event, 'Now_Showing')" id="defaultOpen">Now Showing</button>
+                <button class="tablinks" onclick="openTab(event, 'Coming_Soon')">Coming Soon</button>
+            </div>
+              <!-- Tab content -->
+              <div id="Now_Showing" class="tabcontent">
+                <h3>Featured</h3>
+                <p>Top block busters only</p>
+                <table class="featureTab">
+                    <tr>
+                        <td><img src="./posters_small/7avatar2021.png" alt="movie1"></td>
+                        <td><img src="./posters_small//Black-Adam-Poster.webp" alt="movie2"></td>
+                        <td><img src="./posters_small//Elvis-poster.png" alt="movie3"></td>
+                        <td><img src="./posters_small/Everything-Everywhere-All-At-Once.png" alt="movie4"></td>
+                        <td><img src="./posters_small/the-menu.jpg" alt="movie5"></td>
+                    </tr>
+                    <tr>
+                        <td><p>007 No Time To Die</p></td>
+                        <td><p>Venom: Let There Be Carnage</p></td>
+                        <td><p>Dune</p></td>
+                        <td><p>The Mandalorian</p></td>
+                        <td><p>ShangChi and The Legend of Ten Rings</p></td>
+                    </tr>
+                </table>
+              </div>
+              
+              <div id="Coming_Soon" class="tabcontent">
+                <h3>Featured</h3>
+                <p>Upcoming block busters</p>
+                <table class="featureTab">
+                    <tr>
+                        <td><img src="./posters_small/eternals.jpg" alt="movie1"></td>
+                        <td><img src="./posters_small/belle.jpg" alt="movie2"></td>
+                        <td><img src="./posters_small/Dont Breathe 2.jpg" alt="movie3"></td>
+                        <td><img src="./posters_small/encanto.jpg" alt="movie4"></td>
+                        <td><img src="./posters_small/freeguy.jpg" alt="movie5"></td>
+                    </tr>
+                    <tr>
+                        <td><p>Marvel Studios: The Eternals</p></td>
+                        <td><p>Belle</p></td>
+                        <td><p>Don't Breathe 2</p></td>
+                        <td><p>Disney Pixar's Encanto</p></td>
+                        <td><p>Free Guy</p></td>
+                    </tr>
+                </table>
+              </div>
+              
+              <script>
+                  function openTab(evt, tabName) {
+                    // Declare all variables
+                    var i, tabcontent, tablinks;
+
+                    // Get all elements with class="tabcontent" and hide them
+                    tabcontent = document.getElementsByClassName("tabcontent");
+                    for (i = 0; i < tabcontent.length; i++) {
+                        tabcontent[i].style.display = "none";
+                    }
+
+                    // Get all elements with class="tablinks" and remove the class "active"
+                    tablinks = document.getElementsByClassName("tablinks");
+                    for (i = 0; i < tablinks.length; i++) {
+                        tablinks[i].className = tablinks[i].className.replace(" active", "");
+                    }
+
+                    // Show the current tab, and add an "active" class to the button that opened the tab
+                    document.getElementById(tabName).style.display = "block";
+                    evt.currentTarget.className += " active";
+                }
+              </script>
+              <script>
+                // Get the element with id="defaultOpen" and click on it
+                document.getElementById("defaultOpen").click();
+              </script>
+        </div>
+        <div class="push"></div>
+        <footer class="footer">
+           <table>
+               <tr>
+                   <td><a href="tnc.html"><small><b>Terms and Conditions</b></small></a></td>
+               </tr>
+               <tr>
+                   <td><small><i>By using our servicces, you hereby agree to these terms. When you 
+                       access this website, you acknowledge that you <br>have read and agree to abide by 
+                       the terms described. If you do not agree to the terms, 
+                       you should exit this site. <br>&copy; SJ Groups Company</i></small>
+                       
+                    </td>
+               </tr>
+           </table>
+        </footer>
+    </div>
+
+</body>
+</html>

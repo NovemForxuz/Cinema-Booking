@@ -1,0 +1,170 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SJ Theatres - Movies</title>
+    <link rel="stylesheet" href="stylesheet.css">
+    <link rel="shortcut icon" type="image/jpg" href="logo.PNG"/>
+</head>
+<body>
+    <div id="wrapper">
+        <header>
+            <img id='company_logo' src="headerv2.PNG" alt="Logo" width="300px">
+            <table class="social">
+                <tr>
+                    <td>
+                        <p>Follow us</p>
+                    </td>
+                    <td>
+                        <a href="www.facebook.com"><img class="social" src="facebook-logo.jpg" alt="fb-logo" width="37px"></a>
+                    </td>
+                    <td>
+                        <a href="www.instagram.com"><img class="social" src="instagram-logo.png" alt="ig-logo" width="20px"></a>
+                    </td>
+                </tr>
+            </table>
+        </header>
+
+        <div id="nav">
+            <nav>
+                <ul class="nav">
+                    <li class="nav"><a href="index.html">Home</a></li>
+                    <li class="nav"><a class="active" href="movies.html">Movies</a></li>
+                    <li class="nav"><a href="cinema.html">Cinema</a></li>
+                    <li class="nav"><a href="javascript:openModal()">Check Booking</a></li> <!--trigger js to open modal-->
+                </ul>
+            </nav>
+        </div>
+
+        <!-- The Modal -->
+        <div id="myModal" class="modal">
+
+            <!-- Modal content -->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <span class="close">&times;</span>
+                    <h3>Check Booking</h3>
+                </div>
+                <div class="modal-body">
+                    <br>
+                    <form action="check_booking.php" method="post"> <!--php script to check method, match detail and fetch data from db-->
+                        <label for="check_method">Method:&nbsp;</label>
+                        <select name="check_method" id="check_method">
+                            <option value="email" selected>Email address</option>
+                            <option value="bookid">Transaction ID</option>
+                            <option value="hp">Phone number</option>
+                        </select>
+                        <br><br>
+                        <input type="text" name="user_detail" id="user_detail" size="35" required placeholder = "enter details here">
+                        <input type="submit" value="Check" id="user_detail_submit">
+                    </form>
+                    <br><br><br>
+                    <p>SE: redirect to another page (modified confirmation page)</p>
+                </div>
+            </div>
+        </div>
+        <script>
+            // Get the modal
+            var modal = document.getElementById("myModal");
+
+            // Get the button that opens the modal
+            var btn = document.getElementById("myBtn");
+
+            // Get the <span> element that closes the modal
+            var span = document.getElementsByClassName("close")[0];
+
+            // When the user clicks the button, open the modal 
+            function openModal() {
+                modal.style.display = "block";
+            }
+            // When the user clicks on <span> (x), close the modal
+            span.onclick = function() {
+                modal.style.display = "none";
+            }
+            // When the user clicks anywhere outside of the modal, close it
+            window.onclick = function(event) {
+                if (event.target == modal) {
+                    modal.style.display = "none";
+                }
+            }
+        </script>
+
+
+        <ul class="breadcrumb">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="movies.html">Movies</a></li>
+            <li>movie1</li> <!--use php get movie name form db? -->
+        </ul>
+
+        <div class="content">
+            <div class="mini_wrapper">
+                <h2 class="movie_title">Dune</h2>
+                <p class="rating">(PG - coarse language)</p>
+                <hr class="movie_title">
+                <br>
+                <div class="individual_mov">
+                    <div id="img">
+                        <img src="posters_small//dune.webp" alt="movie poster">
+                    </div>
+                    <div id="info">
+                        <div id="details">
+                            <h3>Details</h3>
+                            <table class="individual_mov">
+                                <tr>
+                                    <td rowspan="2" class="label">Cast: </td>
+                                    <td rowspan="2" class="detail">Timothée Chalamet, Rebecca Ferguson, Oscar Isaac, Josh Brolin, Stellan Skarsgård, Dave Bautista</td>
+                                    <td class="label">Release:</td>
+                                    <td class="detail">16-09-2021</td>
+                                </tr>
+                                <tr>
+                                    <td class="label">Running Time: </td>
+                                    <td class="detail">156 minutes</td>
+                                </tr>
+                                <tr>
+                                    <td class="label">Director: </td>
+                                    <td class="detail">Denis Villeneuve</td>
+                                    <td class="label">Distributor: </td>
+                                    <td class="detail">WB</td>
+                                </tr>
+                                <tr>
+                                    <td class="label">Genre: </td>
+                                    <td class="detail">Adventure</td>
+                                    <td class="label">Language: </td>
+                                    <td class="detail">ENG</td>
+                                </tr>
+                            </table>
+                        </div>
+                        <div id="synopsis">
+                            <h3>Synopsis</h3>
+                            <p>A mythic and emotionally charged hero’s journey, “Dune” tells the story of Paul Atreides, a brilliant and gifted young man born into a great destiny beyond his understanding, who must travel to the most dangerous planet in the universe to ensure the future of his family and his people. As malevolent forces explode into conflict over the planet’s exclusive supply of the most precious resource in existence—a commodity capable of unlocking humanity’s greatest potential—only those who can conquer their fear will survive.
+                            </p>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!---------------------------------------------------------------booking's here---------------------------------------------------->
+            
+              
+        <div class="push"></div>
+        <footer class="footer">
+           <table>
+               <tr>
+                   <td><a href="tnc.html"><small><b>Terms and Conditions</b></small></a></td>
+               </tr>
+               <tr>
+                   <td><small><i>By using our servicces, you hereby agree to these terms. When you 
+                       access this website, you acknowledge that you <br>have read and agree to abide by 
+                       the terms described. If you do not agree to the terms, 
+                       you should exit this site. <br>&copy; SJ Groups Company</i></small>
+                       
+                    </td>
+               </tr>
+           </table>
+        </footer>
+    </div>
+
+
+</body>
+</html>
