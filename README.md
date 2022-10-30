@@ -1,6 +1,6 @@
-# EE4717-Cineam-Project
+# EE4717-Cinema Booking-Project
 
-A basic cinema booking webapp for EE4717 year 4 webapp design course NTU
+A simple cinema booking webapp for EE4717 year 4 Web Application Design course NTU
 
 ## Functions
 - Browse movies
