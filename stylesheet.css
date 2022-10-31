@@ -152,7 +152,51 @@ footer a {
   border: none
 }
 
+/* ----- Flexbox layout (flexible)----- */
+.flex-row {
+    display: flex;
+    flex-direction: row;
+    overflow: scroll;
+}
 
+.flex-col {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+.flex-row::-webkit-scrollbar,
+.flex-col::-webkit-scrollbar {
+    display: none;
+} 
+  
+  /* Hide scrollbar for IE, Edge and Firefox */
+.flex-row, .flex-col {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+}
+
+/* --- must be used with/within flex --- */
+.flex-grow {
+    flex: 1;
+}
+
+.valign-center {
+    align-items: center;
+}
+
+.halign-center {
+    justify-content: center;
+}
+
+.center {
+    align-items: center;
+    justify-content: center;
+}
+
+.space-betw {
+    justify-content: space-between;
+}
 
 
 /*=======================Home Specific=======================*/
@@ -322,7 +366,7 @@ ul.breadcrumb {
   margin-top: 0px;
   padding: 10px
 }
-table.movie_tabs {
+table.movie_tabs, .tabcontent .movie_tabs {
   color: #fff;
   margin-left: auto;
   margin-right: auto;
@@ -330,11 +374,17 @@ table.movie_tabs {
 }
 table.movie_tabs td {
   width:  250px;
+  /* width: auto; */
+  height: 250px;
+  margin: 0 auto;
   padding: 0px 20px 0px 20px;
 }
 table.movie_tabs img{
-  max-width: 100%;
-  max-height: 100%;
+  /* max-width: 100%;
+  max-height: 100%; */
+  width: 230px;
+  height: 363px;
+  object-fit: cover;
   padding-top: 20px;
 }
 table.movie_tabs tr:nth-of-type(even) { 
@@ -342,7 +392,7 @@ table.movie_tabs tr:nth-of-type(even) {
   height: 170px;
   background-color: rgb(0, 0, 0);
 }
-table.movie_tabs small {
+table.movie_tabs small, .movie-card small {
   font-size: 10px;
   padding: 10px 0px 10px 0px;
   color: #bbb;
@@ -359,6 +409,7 @@ table.movie_tabs p.movie_title {
   min-height: 34px;
 }
 button.book {
+  width: 100%;
   background-color: #0084ff;
   border: 0px;
   color: #fff;
@@ -369,6 +420,37 @@ button.book {
 button.book:hover {
   background-color: #004d96;
 }
+
+.tabcontent .movie_tabs { 
+  width: 90%;
+  background-color: #000;
+}
+
+.movie-card {
+  width: 213px;
+  padding: 15px;
+  margin-bottom: 10px;
+  /* background-color: #000; */
+  transition: box-shadow 0.35s;
+}
+
+.movie-card:hover {
+  box-shadow: 0px 4px 16px 0px rgba(0,0,0,0.2);
+}
+
+.movie-card .bounding-box {
+  width: auto;
+  height: 250px;
+  margin: 0;
+  overflow: hidden;
+}
+
+.movie-card .bounding-box img {
+  width: 183px;
+  height: auto;
+  object-fit: cover;
+}
+
 /*=================Individual Movie styling==================*/
 div.mini_wrapper {
   width: 1060px;
