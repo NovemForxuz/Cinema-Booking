@@ -1,12 +1,19 @@
 /*-----------------------General Styling-----------------------*/
+:root {
+  --pri-background: #608ED9;
+  --pri-accent: #E3C189;
+}
+
 body {
-  background-color: #000;
+  /* background-color: #000; */
+  background-color: var(--pri-background);
   border: 0;
   margin: 0;
   font-family: Verdana, sans-serif;
 }
 #wrapper {
-  background-color: #000;
+  /* background-color: #000; */
+  background-color: var(--pri-background);
   width: 100%;
   color: #f2f2f2;
   min-height: 100%;
@@ -32,6 +39,7 @@ ul.nav {
     padding: 0;
     overflow: hidden;
     background-color: #333;
+    /* background-color: var(--pri-background); */
 }
 li.nav {
     float: left;
@@ -227,14 +235,16 @@ span.active {
 }
 /* Create an active/current tablink class */
 .tab button.active {
-  background-color: #ffbb00;
+  /* background-color: #ffbb00; */
+  background-color: var(--pri-accent);
   color: #333;
 }
 /* Style the tab content */
 .tabcontent {
   display: none;
   padding: 6px 12px;
-  border-top: 3px solid #ffbb00;
+  /* border-top: 3px solid #ffbb00; */
+  border-top: 3px solid var(--pri-accent);
   animation: fadeEffect 0.5s; /* Fading effect takes 0.5 second */
 }
 table.featureTab {
@@ -243,12 +253,16 @@ table.featureTab {
   padding-bottom: 50px;
 }
 table.featureTab td {
-  max-width: 300px ;
+  width: 220px;
+  height: 250px;
+  margin: 0;
   padding: 0px 20px 0px 20px ;
 }
 table.featureTab img{
-  max-width: 100%;
-  max-height: 100%;
+  width: 220px;
+  height: 330px;
+  margin: 0 auto;
+  /* object-fit: contain; */
   padding-top: 20px;
 }
 table.featureTab tr:nth-of-type(even) { 
@@ -262,6 +276,18 @@ div.tabcontent h3, .tabcontent p {
 @keyframes fadeEffect {
   from {opacity: 0;}
   to {opacity: 1;}
+}
+
+.bounding-box {
+  width: auto;
+  height: 250px;
+  margin: 0 auto;
+}
+
+.bounding-box img {
+  width: 183px;
+  height: auto;
+  object-fit: cover;
 }
 
 /*=======================Movie styling=======================*/
