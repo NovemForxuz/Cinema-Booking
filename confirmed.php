@@ -1,3 +1,4 @@
+<?php session_start(); ?>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -93,7 +94,7 @@
                 <br>
                 <p>
                 <?php
-                    session_start();
+                    // session_start();
                     $email = $_SESSION['email'];
                     $movie_name = $_SESSION['movie_name'];
                     $timimg = (string)$_SESSION['timing'];
