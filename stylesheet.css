@@ -1,27 +1,37 @@
 /*-----------------------General Styling-----------------------*/
 :root {
-  --pri-background: #608ED9;
-  --pri-accent: #E3C189;
+  --pri-background: #596980;
+  --dark-background: #444F60;
+  --light-background: #EAEAEA;
+  --pri-accent: #667C9B;
+  --light-accent: #7B94B8;
+
 }
 
 body {
-  background-color: #000;
-  /* background-color: var(--pri-background); */
+  /* background-color: #000; */
+  background-color: var(--light-background);
   border: 0;
   margin: 0;
   font-family: Verdana, sans-serif;
 }
 #wrapper {
-  background-color: #000;
-  /* background-color: var(--pri-background); */
+  /* background-color: #000; */
+  background-color: white;
   width: 100%;
-  color: #f2f2f2;
+  /* color: #f2f2f2; */
+  color: var(--pri-accent);
   min-height: 100%;
  
   min-width: 1100px;
 }
 header {
   height: 100px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  overflow: hidden;
 }
 header.img #comapny_logo {
   float: left;
