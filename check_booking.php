@@ -16,18 +16,21 @@
 </head>
 <body>
     <div id="wrapper">
-        <header>
-            <img id='company_logo' src="headerv2.PNG" alt="Logo" width="300px">
+    <header>
+            <img id='company_logo' src="header_img/header.png" alt="Logo" width="300px">
             <table class="social">
                 <tr>
                     <td>
-                        <p>Follow us</p>
+                        <p>Follow us&nbsp;</p>
                     </td>
                     <td>
-                        <a href="www.facebook.com"><img class="social" src="facebook-logo.jpg" alt="fb-logo" width="37px"></a>
+                        <a href="https://www.facebook.com" target="_blank"><img class="social" src="facebook-logo.PNG" alt="fb-logo" width="23px"></a>
                     </td>
                     <td>
-                        <a href="www.instagram.com"><img class="social" src="instagram-logo.png" alt="ig-logo" width="20px"></a>
+                        <a href="https://www.twitter.com" target="_blank"><img class="social" src="twitter-logo.png" alt="tt-logo" width="30px"></a>
+                    </td>
+                    <td>
+                        <a href="https://www.instagram.com" target="_blank"><img class="social" src="Instagram-logo.png" alt="ig-logo" width="30px"></a>
                     </td>
                 </tr>
             </table>
@@ -53,7 +56,7 @@
                     $attr = 'email';
                     echo "checking with ".$attr.": ";
                     $email = $_POST['user_detail'];
-                    echo "<u><span style='color: #ffd900;'>".$email."</span></u><br>";
+                    echo "<u><span style='color: #0275d8; filter: contrast(200%);'>".$email."</span></u><br>";
                     $query = "SELECT * FROM ticketorders
                     WHERE email='$email'
                     GROUP BY booking_id";
