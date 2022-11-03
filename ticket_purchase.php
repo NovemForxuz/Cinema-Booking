@@ -36,7 +36,7 @@ $movie_summary_1=$row['summary'];
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SJ Theatres - Ticketing</title>
+    <title>H&H Theatres - Ticketing</title>
     <link rel="stylesheet" href="stylesheet.css">
 </head>
 
@@ -44,7 +44,7 @@ $movie_summary_1=$row['summary'];
 <body>
     <div id="wrapper">
         <header>
-            <h1>SJ Theatres</h1>
+            <h1>H&H Theatres</h1>
         </header>
 
         <div id="nav">
