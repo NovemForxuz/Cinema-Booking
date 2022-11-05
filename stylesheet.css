@@ -334,7 +334,7 @@ table.featureTab td {
   margin: 0;
   padding: 0px 20px 0px 20px ;
 }
-table.featureTab img{
+table.featureTab img {
   width: 220px;
   height: 330px;
   margin: 0 auto;
@@ -348,6 +348,37 @@ div.tabcontent h3, .tabcontent p {
   text-align: center;
 }
 
+.featureTab.flex-row {
+  width: 90%;
+  padding: 0 15px 15px;
+  margin: 0 auto;
+}
+
+.movieCard {
+  width: 230px;
+  padding: 20px;
+  border-radius: 4px;
+  transition: box-shadow 0.35s , color 0.5s , background-color 0.35s ;
+}
+.movieCard:hover {
+  color: white;
+  background-color: #333;
+  box-shadow: 0px 4px 16px 0px rgba(0,0,0,0.2);
+}
+.movieCard:hover > p{
+  transform: translateY(-5px);
+}
+.movieCard:hover > .bounding-box{
+  scale: 1.05;
+  filter: contrast(115%);
+  border-radius: 4px;
+  box-shadow: 0px 4px 16px 0px rgba(255,255,255,0.2);
+}
+.movieCard p {
+  padding: 30px 20px 10px;
+  transition: transform .35s;
+}
+
 /* Go from zero to full opacity */
 @keyframes fadeEffect {
   from {opacity: 0;}
@@ -356,14 +387,16 @@ div.tabcontent h3, .tabcontent p {
 
 .bounding-box {
   width: auto;
-  height: 250px;
+  height: 290px;
   margin: 0 auto;
+  transition: box-shadow .75s, scale .5s, filter .5s;
+  overflow: hidden;
 }
 
 .bounding-box img {
   width: 183px;
-  height: auto;
-  object-fit: cover;
+  height: inherit;
+  object-fit: fill;
 }
 
 /*=======================Movie styling=======================*/
