@@ -36,7 +36,7 @@ $movie_summary_1=$row['summary'];
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SJ Theatres - Ticketing</title>
+    <title>H&H Theatres - Ticketing</title>
     <link rel="stylesheet" href="stylesheet.css">
 </head>
 
@@ -44,7 +44,7 @@ $movie_summary_1=$row['summary'];
 <body>
     <div id="wrapper">
         <header>
-            <h1>SJ Theatres</h1>
+            <h1>H&H Theatres</h1>
         </header>
 
         <div id="nav">
@@ -150,9 +150,9 @@ $movie_summary_1=$row['summary'];
                                     <td>
                                         Please Choose Date and Timing for Movie: <br><br><center>Date: 
                                         <Select name = "date"></center> // drop down table for dates
-                                            <option value = "14-Dec-2021">14/12/21</option>
-                                            <option value = "15-Dec-2021">15/12/21</option>
-                                            <option value = "16-Dec-2021">16/12/21</option>
+                                            <option value = "2-Nov-2022">2/11/22</option>
+                                            <option value = "3-Nov-2022">3/11/22</option>
+                                            <option value = "4-Nov-2022">4/11/22</option>
                                         </select>
                                         <br><br>
                                     </td>
@@ -161,8 +161,8 @@ $movie_summary_1=$row['summary'];
                                     <td>
                                         <br>
                                         <input class="ticket_timing_button" name = "timingButton" type="submit" value="1000">
-                                        <input class="ticket_timing_button" name = "timingButton" type="submit" value="1400">
-                                        <input class="ticket_timing_button" name = "timingButton" type="submit" value="1600">
+                                        <input class="ticket_timing_button" name = "timingButton" type="submit" value="1300">
+                                        <input class="ticket_timing_button" name = "timingButton" type="submit" value="1630">
                                         <input class="ticket_timing_button" name = "timingButton" type="submit" value="1800">
                                         <input class="ticket_timing_button" name = "timingButton" type="submit" value="2000">
                                     </td>

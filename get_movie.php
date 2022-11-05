@@ -1,4 +1,4 @@
-<?php
+2<?php
     session_start();
 
     # db credentials
@@ -44,24 +44,27 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SJ Theatres - Movies</title>
+    <title>H&H Theatres - Movies</title>
     <link rel="stylesheet" href="stylesheet.css">
     <link rel="shortcut icon" type="image/jpg" href="./logo.PNG"/>
 </head>
 <body>
     <div id="wrapper">
         <header>
-            <img id='company_logo' src="headerv2.PNG" alt="Logo" width="300px">
+            <img id='company_logo' src="header_img/header.png" alt="Logo" width="300px">
             <table class="social">
                 <tr>
                     <td>
-                        <p>Follow us</p>
+                        <p>Follow us&nbsp;</p>
                     </td>
                     <td>
-                        <a href="www.facebook.com"><img class="social" src="facebook-logo.jpg" alt="fb-logo" width="37px"></a>
+                        <a href="https://www.facebook.com" target="_blank"><img class="social" src="facebook-logo.PNG" alt="fb-logo" width="23px"></a>
                     </td>
                     <td>
-                        <a href="www.instagram.com"><img class="social" src="instagram-logo.png" alt="ig-logo" width="20px"></a>
+                        <a href="https://www.twitter.com" target="_blank"><img class="social" src="twitter-logo.png" alt="tt-logo" width="30px"></a>
+                    </td>
+                    <td>
+                        <a href="https://www.instagram.com" target="_blank"><img class="social" src="Instagram-logo.png" alt="ig-logo" width="30px"></a>
                     </td>
                 </tr>
             </table>
@@ -189,9 +192,9 @@
                             <td>
                                 Please Choose Date and Timing for Movie: <br><br>Date: 
                                 <Select name = "date"> // drop down table for dates
-                                    <option value = "14-Dec-2021">14/12/21</option>
-                                    <option value = "15-Dec-2021">15/12/21</option>
-                                    <option value = "16-Dec-2021">16/12/21</option>
+                                    <option value = "2-Nov-2022">2/11/22</option>
+                                    <option value = "3-Nov-2022">3/11/22</option>
+                                    <option value = "4-Nov-2022">4/11/22</option>
                                 </select>
                                 <br><br>
                             </td>
@@ -200,8 +203,8 @@
                             <td>
                                 <br>
                                 <input class="ticket_timing_button" name = "timingButton" type="submit" value="1000">
-                                <input class="ticket_timing_button" name = "timingButton" type="submit" value="1400">
-                                <input class="ticket_timing_button" name = "timingButton" type="submit" value="1600">
+                                <input class="ticket_timing_button" name = "timingButton" type="submit" value="1300">
+                                <input class="ticket_timing_button" name = "timingButton" type="submit" value="1630">
                                 <input class="ticket_timing_button" name = "timingButton" type="submit" value="1800">
                                 <input class="ticket_timing_button" name = "timingButton" type="submit" value="2000">
                             </td>
