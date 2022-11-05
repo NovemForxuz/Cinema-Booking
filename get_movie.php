@@ -1,4 +1,4 @@
-2<?php
+<?php
     session_start();
 
     # db credentials
