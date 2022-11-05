@@ -10,7 +10,7 @@ CREATE TABLE IF NOT EXISTS `MOVIE` (
   `duration` int(3) NOT NULL COMMENT 'mins',
   `language` varchar(3) NOT NULL COMMENT 'ENG / CHI/  HIN / MAL',
   `genre` varchar(50) NOT NULL,
-  `distributor` varchar(10) NOT NULL,
+  `distributor` varchar(50) NOT NULL,
   `release_date` date NOT NULL,
   `synopsis` varchar(10000) NOT NULL,
   `image_dir` varchar(500) NOT NULL,

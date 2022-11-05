@@ -1,4 +1,4 @@
-<?php
+2<?php
     session_start();
 
     # db credentials
@@ -192,9 +192,9 @@
                             <td>
                                 Please Choose Date and Timing for Movie: <br><br>Date: 
                                 <Select name = "date"> // drop down table for dates
-                                    <option value = "14-Dec-2021">14/12/21</option>
-                                    <option value = "15-Dec-2021">15/12/21</option>
-                                    <option value = "16-Dec-2021">16/12/21</option>
+                                    <option value = "2-Nov-2022">2/11/22</option>
+                                    <option value = "3-Nov-2022">3/11/22</option>
+                                    <option value = "4-Nov-2022">4/11/22</option>
                                 </select>
                                 <br><br>
                             </td>
@@ -203,8 +203,8 @@
                             <td>
                                 <br>
                                 <input class="ticket_timing_button" name = "timingButton" type="submit" value="1000">
-                                <input class="ticket_timing_button" name = "timingButton" type="submit" value="1400">
-                                <input class="ticket_timing_button" name = "timingButton" type="submit" value="1600">
+                                <input class="ticket_timing_button" name = "timingButton" type="submit" value="1300">
+                                <input class="ticket_timing_button" name = "timingButton" type="submit" value="1630">
                                 <input class="ticket_timing_button" name = "timingButton" type="submit" value="1800">
                                 <input class="ticket_timing_button" name = "timingButton" type="submit" value="2000">
                             </td>
