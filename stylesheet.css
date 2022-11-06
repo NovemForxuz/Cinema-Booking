@@ -334,7 +334,7 @@ table.featureTab td {
   margin: 0;
   padding: 0px 20px 0px 20px ;
 }
-table.featureTab img{
+table.featureTab img {
   width: 220px;
   height: 330px;
   margin: 0 auto;
@@ -348,6 +348,62 @@ div.tabcontent h3, .tabcontent p {
   text-align: center;
 }
 
+.featureTab.flex-row {
+  width: 90%;
+  padding: 0 15px 15px;
+  margin: 0 auto;
+}
+
+.movieTab.flex-row {
+  width: 95%;
+  padding: 2%;
+  margin: 0 auto;
+  background-color: white;
+}
+
+.movieCard {
+  width: 230px;
+  padding: 20px;
+  border-radius: 4px;
+  transition: box-shadow 0.35s , color 0.5s , background-color 0.35s ;
+}
+.movieCard.big {
+  width: 270px;
+  margin-bottom: 30px;
+}
+
+.movieCard:hover {
+  color: white;
+  background-color: #333;
+  box-shadow: 0px 4px 16px 0px rgba(0,0,0,0.2);
+}
+.movieCard:hover > p {
+  transform: translateY(-5px);
+}
+.movieCard.big:hover span.movie_title {
+  transform: translateY(10px);
+  font-weight: 500;
+}
+.movieCard:hover > .bounding-box{
+  scale: 1.05;
+  filter: contrast(115%);
+  border-radius: 4px;
+  box-shadow: 0px 4px 16px 0px rgba(255,255,255,0.2);
+}
+.featureTab .movieCard p {
+  padding: 30px 20px 10px;
+}
+.movieCard p {
+  transition: transform .35s;
+}
+.movieCard.big .movie_title {
+  transition: transform .35s;
+}
+
+.movieCard.big .flex-col {
+  width: 100%;
+}
+
 /* Go from zero to full opacity */
 @keyframes fadeEffect {
   from {opacity: 0;}
@@ -356,14 +412,23 @@ div.tabcontent h3, .tabcontent p {
 
 .bounding-box {
   width: auto;
-  height: 250px;
+  height: 290px;
   margin: 0 auto;
+  transition: box-shadow .75s, scale .5s, filter .5s;
+  overflow: hidden;
 }
 
 .bounding-box img {
   width: 183px;
-  height: auto;
-  object-fit: cover;
+  height: inherit;
+  object-fit: fill;
+}
+
+.movieCard.big .bounding-box {
+  height: 363px;
+}
+.movieCard.big .bounding-box img {
+  width: 230px;
 }
 
 /*=======================Movie styling=======================*/
@@ -422,17 +487,22 @@ table.movie_tabs tr:nth-of-type(even) {
   height: 170px;
   background-color: white;
 }
-table.movie_tabs small, .movie-card small {
+table.movie_tabs small {
   font-size: 10px;
   padding: 10px 0px 10px 0px;
   color: #bbb;
 }
-table.movie_tabs p{
+.movieTab small {
+  font-size: 10px;
+  padding: 5px 0px;
+  color: #bbb;
+}
+table.movie_tabs p, .movieTab span{
   font-size: 10px;
   text-align: left;
   margin: 5px 0px;
 }
-table.movie_tabs p.movie_title {
+table.movie_tabs p.movie_title, .movieTab span.movie_title {
   font-size: 14px;
   margin-top: 10px;
   text-align: left;
@@ -454,31 +524,6 @@ button.book:hover {
 .tabcontent .movie_tabs { 
   width: 90%;
   background-color: white;
-}
-
-.movie-card {
-  width: 213px;
-  padding: 15px;
-  margin-bottom: 10px;
-  /* background-color: #000; */
-  transition: box-shadow 0.35s;
-}
-
-.movie-card:hover {
-  box-shadow: 0px 4px 16px 0px rgba(0,0,0,0.2);
-}
-
-.movie-card .bounding-box {
-  width: auto;
-  height: 250px;
-  margin: 0;
-  overflow: hidden;
-}
-
-.movie-card .bounding-box img {
-  width: 183px;
-  height: auto;
-  object-fit: cover;
 }
 
 /*=================Individual Movie styling==================*/
