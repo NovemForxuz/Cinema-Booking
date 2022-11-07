@@ -18,13 +18,13 @@
                         <p>Follow us&nbsp;</p>
                     </td>
                     <td>
-                        <a href="https://www.facebook.com" target="_blank"><img class="social" src="facebook-logo.PNG" alt="fb-logo" width="23px"></a>
+                        <a href="https://www.facebook.com" target="_blank"><img class="social" src="./social_img/facebook-logo.PNG" alt="fb-logo" width="23px"></a>
                     </td>
                     <td>
-                        <a href="https://www.twitter.com" target="_blank"><img class="social" src="twitter-logo.png" alt="tt-logo" width="30px"></a>
+                        <a href="https://www.twitter.com" target="_blank"><img class="social" src="./social_img/twitter-logo.png" alt="tt-logo" width="30px"></a>
                     </td>
                     <td>
-                        <a href="https://www.instagram.com" target="_blank"><img class="social" src="Instagram-logo.png" alt="ig-logo" width="30px"></a>
+                        <a href="https://www.instagram.com" target="_blank"><img class="social" src="./social_img/Instagram-logo.png" alt="ig-logo" width="30px"></a>
                     </td>
                 </tr>
             </table>
