@@ -92,6 +92,18 @@ footer {
     width:100%;
     background:rgb(29, 29, 29);
     min-height: 150;
+    justify-content: center;
+    align-items: center;
+}
+footer .flex-row{
+  width: 80%;
+  margin: 0 auto;
+  padding: 30px;
+}
+
+footer small{
+  margin: 0 auto;
+  justify-content: center;
 }
 footer table {
     color: rgb(201, 201, 201);
