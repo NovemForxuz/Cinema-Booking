@@ -70,10 +70,10 @@ function valEmail(ele) {
 function valPhone(ele) {
     //var email = document.getElementById('email').value;
     var phone = ele.value
-    var phone_regex = /^\d+$/
+    var phone_regex = /^\d{8}$/
     if (!phone_regex.test(phone)) {
         //alert('E-mail - invalid format!');
-        document.getElementById("phone_alert").innerHTML = "*Phone - numbers only without spacing."
+        document.getElementById("phone_alert").innerHTML = "*Phone - 8 numbers only without spacing."
     }
     if (phone_regex.test(phone)) {
         document.getElementById("phone_alert").innerHTML = "";
